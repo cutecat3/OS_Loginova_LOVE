@@ -6,6 +6,7 @@ max_showers=1
 
 from threading import BoundedSemaphore,Thread
 
+
 container=BoundedSemaphore(max_showers)
 
 def woman(nloops):
@@ -36,3 +37,4 @@ for thread in threads: #Starts all the threads.
 for thread in threads: #Waits for threads to complete
   thread.join()
 print("Кто-либо вышедший идет за пивом")
+
